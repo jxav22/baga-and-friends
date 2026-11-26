@@ -23,16 +23,18 @@ var _lines: Array[Dictionary] = [
 
 func _ready() -> void:
 	visible = false
-	mouse_filter = Control.MOUSE_FILTER_STOP
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	btn_next.pressed.connect(_on_next)
 	btn_skip.pressed.connect(_finish)
-	# If opened as a standalone scene, auto-start then return.
-	if get_parent() == null or get_parent().name == "root":
+	# Standalone navigation (not embedded in MainRoom TutorialHost).
+	await get_tree().process_frame
+	if get_tree().current_scene == self:
 		start_tutorial(true)
 
 
 func start_tutorial(replay: bool = false) -> void:
 	visible = true
+	mouse_filter = Control.MOUSE_FILTER_STOP
 	_step = 0
 	_waiting_action = ""
 	if replay:
@@ -72,6 +74,7 @@ func _on_next() -> void:
 
 func _finish() -> void:
 	visible = false
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	GameState.complete_tutorial()
 	SaveManager.autosave()
 	GameState.say("baga...")

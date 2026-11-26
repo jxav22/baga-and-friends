@@ -17,6 +17,9 @@ var _baga: Control
 
 
 func _ready() -> void:
+	var theme_res := load("res://themes/baga_theme.tres")
+	if theme_res:
+		theme = theme_res
 	_spawn_baga()
 	_connect_signals()
 	_refresh_hud()

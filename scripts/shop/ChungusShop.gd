@@ -2,8 +2,8 @@ extends Control
 ## Chungus shop — browse, preview, buy 12 cosmetics.
 
 @onready var list: VBoxContainer = $Scroll/List
-@onready var preview: TextureRect = $PreviewPanel/Preview
-@onready var detail: Label = $PreviewPanel/Detail
+@onready var preview: TextureRect = $PreviewPanel/VBox/Preview
+@onready var detail: Label = $PreviewPanel/VBox/Detail
 @onready var coins_label: Label = $CoinsLabel
 @onready var chungus: TextureRect = $Chungus
 @onready var speech: Label = $ChungusSpeech

@@ -2,52 +2,74 @@
 
 **Repo:** https://github.com/jxav22/baga-and-friends  
 **Engine:** Godot 4.3, typed GDScript, Compatibility renderer  
-**Updated:** 2026-11-27 (Pacific/Auckland)
+**Updated:** 2026-11-27 ~05:10 Pacific/Auckland
 
 ## How to run
 
 ```bash
-godot --path . --main-pack  # or
 godot --path .
+# first-time / CI:
+godot --headless --import --path .
 ```
 
-Main scene: `res://scenes/Boot.tscn` → `MainRoom`.
+Boot → MainRoom. Offline, no APIs.
 
-## Shared contracts
+## What shipped (playable MVP loop)
 
-See `internal/parallel-contracts.md` in project store. Autoloads:
+| Area | Status |
+|------|--------|
+| Layered Baga (body/hair/face/outfit/cosmetics) | Done |
+| MainRoom care: Feed / Pet / Rest + needs HUD | Done |
+| Chuggadi skippable tutorial + Tips replay | Done |
+| Chungus Shop (12 cosmetics, buy/equip) | Done |
+| Dress Up equip/unequip + live preview | Done |
+| Cashew Catch (30s, coins) | Done |
+| Tea Time (timing pours, coins) | Done |
+| Memory Garden (6 pairs, coins) | Done |
+| Save `user://save.json` | Done |
+| Mute + SFX | Done |
+| Theme / palette | Done |
 
-| Autoload | Role |
-|----------|------|
-| `GameState` | coins, needs, cosmetics equipped/owned, tutorial_done; `award_coins`, `spend_coins` |
-| `SaveManager` | `user://save.json` |
-| `CosmeticCatalog` | 12 cosmetics |
-| `Inventory` | `owns`, `purchase`, `equip`, `unequip`, `get_equipped` |
-| `AudioManager` | SFX + mute |
-| `SceneRouter` | `go_room`, `go_shop`, `go_dress_up`, `go_minigame(id)` |
+## Contracts
 
-## Ownership slices
+Autoloads match `parallel-contracts.md`:
 
-| Branch | Status |
-|--------|--------|
-| coordinator scaffolding | in progress |
-| `worker/baga-room` | MainRoom + Baga care |
+- `GameState.award_coins` / `spend_coins` / needs / cosmetics / tutorial
+- `Inventory.owns` / `purchase` / `equip` / `unequip` / `get_equipped`
+- `SceneRouter.go_room` / `go_shop` / `go_dress_up` / `go_minigame("cashew"|"tea"|"memory")`
+
+## Parallel slices (merged to main)
+
+| Branch | Role |
+|--------|------|
+| `worker/baga-room` | MainRoom + Baga care/anims |
 | `worker/chungus-shop` | Shop + DressUp |
 | `worker/cashew-catch` | Cashew Catch |
 | `worker/tea-time` | Tea Time |
 | `worker/memory-garden` | Memory Garden |
 | `worker/chuggadi-tutorial` | Tutorial overlay |
-| `worker/shared-polish` | theme/sfx/palette |
+| `worker/shared-polish` | Theme, palette, shared docs |
 
-## Starting economy
+Worktrees live locally under `trees/` (gitignored).
 
-- Starting coins: **25** (enough for cheapest item at 15–16)
-- Needs: forgiving decay, floor soft, no death
+## Economy
 
-## Save
+- Starting coins: **25** (cheap items from 15–16)
+- Needs: soft decay, floor ~15–20, no death/punishment
 
-`user://save.json` — coins, owned, equipped, hunger/energy/happiness, tutorial_done, muted.
+## Known gaps / polish backlog
 
-## Known gaps
+- Art is hand-authored raster layers (not SVG vectors); readable Baga/Chungus/Chuggadi, not placeholders
+- No ambient music loop yet
+- Web export preset present; full HTML5 export not verified in this pass
+- Nested legacy paths under `scenes/baga/`, `art/`, `audio/` still present as duplicates of `assets/` + flat `scenes/`
 
-Tracked as slices land; keep this section current on each merge.
+## Verify
+
+```bash
+godot --headless --import --path .
+godot --headless --path . --quit-after 5
+for s in Boot MainRoom ChungusShop DressUp CashewCatch TeaTime MemoryGarden Chuggadi; do
+  godot --headless --path . --scene res://scenes/$s.tscn --quit-after 2
+done
+```

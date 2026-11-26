@@ -57,13 +57,17 @@ offset_top = 110.0
 offset_right = 980.0
 offset_bottom = 420.0
 
-[node name="Preview" type="TextureRect" parent="PreviewPanel"]
+[node name="VBox" type="VBoxContainer" parent="PreviewPanel"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Preview" type="TextureRect" parent="PreviewPanel/VBox"]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Detail" type="Label" parent="PreviewPanel"]
+[node name="Detail" type="Label" parent="PreviewPanel/VBox"]
 layout_mode = 2
 autowrap_mode = 3
 text = "Select an item"
