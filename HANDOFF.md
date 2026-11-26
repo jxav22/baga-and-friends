@@ -46,7 +46,20 @@ Web preset: Compatibility + `html/single_threaded_mode=true`.
 Served `export/web` at `http://127.0.0.1:8765` — loaded WASM, MainRoom, tutorial, Pet/Feed, Chungus Shop round-trip.  
 Screenshots: project store `media/publish-verify/`.
 
-## Known defects
+## Replacement artwork (issue #1)
+
+The active game now uses the replacement pack, with registered wearables, a clean
+room, and card backs. See `docs/ART_INTEGRATION.md` for the complete source mapping,
+before/after captures, reproducible build commands and visual limitations.
+`scripts/prepare_art.py` is the artwork build entry point; the legacy generator
+only writes ignored sketches under `export/legacy-art/`.
+
+Godot 4.3 import, extended smoke and single-threaded Web export pass. Browser
+verification covers care/tutorial, purchase/equipment persistence, all three
+minigames and 1280×720, 960×540, 640×800 viewports. The tutorial practice panel now
+clears care controls. Fixed 16:9 scaling keeps the character aligned with the room.
+
+## Known defects and earlier fixes
 
 - Pages URL 404 until admin enables Pages (steps above)
 - Tutorial wait steps previously blocked Pet/Feed (fixed: dimmer passthrough while waiting)

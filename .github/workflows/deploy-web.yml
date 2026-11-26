@@ -1,6 +1,8 @@
 name: Build & Deploy Web
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
@@ -11,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: web-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -24,6 +26,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python for asset verification
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Verify approved runtime artwork
+        run: |
+          python -m pip install Pillow==12.2.0
+          python scripts/prepare_art.py --check
 
       - name: Cache Godot binary + templates
         id: cache-godot
@@ -59,13 +71,18 @@ jobs:
 
       - name: Import project
         run: |
+          set -euo pipefail
           godot --version
-          godot --headless --import --path . || true
-          # Ensure import finishes
-          godot --headless --editor --quit-after 2 --path . || true
+          godot --headless --import --path . 2>&1 | tee /tmp/baga-import.log
+          ! grep -E 'SCRIPT ERROR|ERROR:' /tmp/baga-import.log
 
       - name: Smoke test
-        run: godot --headless --path . --scene res://scenes/SmokeTest.tscn
+        timeout-minutes: 2
+        run: |
+          set -euo pipefail
+          godot --headless --path . --scene res://scenes/SmokeTest.tscn 2>&1 | tee /tmp/baga-smoke.log
+          grep -q 'SMOKE PASS' /tmp/baga-smoke.log
+          ! grep -E 'SCRIPT ERROR|ERROR:' /tmp/baga-smoke.log
 
       - name: Export Web (Compatibility / single-threaded)
         run: |
@@ -95,6 +112,7 @@ jobs:
           if-no-files-found: error
 
       - name: Publish gh-pages branch (branch-source fallback)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -105,6 +123,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     # Continues even when Pages site not yet created in Settings
     continue-on-error: true

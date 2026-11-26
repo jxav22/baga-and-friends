@@ -38,6 +38,7 @@ godot --headless --path . --export-release "Web" export/web/index.html
 
 ## Docs
 
+- `docs/ART_INTEGRATION.md` — approved art workflow, candidate audit, validation and before/after screenshots
 - `HANDOFF.md` — status, deploy notes, how to run
 - Project brief lives with the Cursor project store
 

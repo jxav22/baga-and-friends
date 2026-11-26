@@ -59,6 +59,12 @@ func _show() -> void:
 	_waiting_action = str(entry.get("wait", ""))
 	btn_next.text = "Done" if _step == _lines.size() - 1 else ("Waiting…" if _waiting_action != "" else "Next")
 	btn_next.disabled = _waiting_action != ""
+	# Keep the care buttons visible and clickable during the two practice steps.
+	var practicing := _waiting_action != ""
+	$Panel.offset_top = 340.0 if practicing else 480.0
+	$Panel.offset_bottom = 540.0 if practicing else 680.0
+	bird.offset_top = 330.0 if practicing else 430.0
+	bird.offset_bottom = 490.0 if practicing else 590.0
 	# While waiting for Pet/Feed, let care buttons receive clicks through the dimmer.
 	var dim := get_node_or_null("Dim") as Control
 	if _waiting_action != "":

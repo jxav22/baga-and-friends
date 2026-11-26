@@ -1,0 +1,1186 @@
+[
+  {
+    "candidate": "baga/body.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      58,
+      167,
+      205,
+      292
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/body.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/face.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "visible_bounds": [
+      68,
+      80,
+      191,
+      164
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/face.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/hair.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      6,
+      4,
+      249,
+      190
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/hair.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/head.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "visible_bounds": [
+      52,
+      59,
+      204,
+      173
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/head.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/preview.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      6,
+      4,
+      249,
+      316
+    ],
+    "status": "source: recomposed layers or reviewed production refinement",
+    "runtime": "assets/baga/preview.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/shirt.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      62,
+      165,
+      202,
+      238
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/shirt.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/shoes.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      86,
+      282,
+      184,
+      316
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/shoes.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "baga/skirt.png",
+    "size": [
+      256,
+      320
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      77,
+      233,
+      184,
+      266
+    ],
+    "status": "integrated",
+    "runtime": "assets/baga/skirt.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "chuggadi/chuggadi.png",
+    "size": [
+      256,
+      269
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      252,
+      265
+    ],
+    "status": "integrated",
+    "runtime": "assets/chuggadi/chuggadi.png",
+    "runtime_size": [
+      180,
+      180
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "chungus/chungus.png",
+    "size": [
+      321,
+      283
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      317,
+      279
+    ],
+    "status": "integrated",
+    "runtime": "assets/chungus/chungus.png",
+    "runtime_size": [
+      280,
+      240
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/accessory_bow.png",
+    "size": [
+      275,
+      212
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      271,
+      208
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/accessory_bow.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      115,
+      168,
+      151,
+      196
+    ]
+  },
+  {
+    "candidate": "cosmetics/accessory_bow_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      15,
+      91,
+      81
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/accessory_bow_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/accessory_spectacles.png",
+    "size": [
+      309,
+      117
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      305,
+      113
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/accessory_spectacles.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      65,
+      89,
+      195,
+      136
+    ]
+  },
+  {
+    "candidate": "cosmetics/accessory_spectacles_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      31,
+      91,
+      64
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/accessory_spectacles_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/feet_duck_slippers.png",
+    "size": [
+      289,
+      182
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      285,
+      178
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/feet_duck_slippers.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      83,
+      257,
+      189,
+      317
+    ]
+  },
+  {
+    "candidate": "cosmetics/feet_duck_slippers_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      21,
+      91,
+      75
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/feet_duck_slippers_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/hat_beanie.png",
+    "size": [
+      262,
+      276
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      258,
+      272
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/hat_beanie.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      86,
+      1,
+      178,
+      98
+    ]
+  },
+  {
+    "candidate": "cosmetics/hat_beanie_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      7,
+      5,
+      89,
+      91
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/hat_beanie_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/hat_chef.png",
+    "size": [
+      279,
+      236
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      275,
+      232
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/hat_chef.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      71,
+      1,
+      185,
+      97
+    ]
+  },
+  {
+    "candidate": "cosmetics/hat_chef_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      11,
+      91,
+      84
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/hat_chef_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/hat_cowboy.png",
+    "size": [
+      309,
+      185
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      305,
+      181
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/hat_cowboy.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      55,
+      1,
+      207,
+      91
+    ]
+  },
+  {
+    "candidate": "cosmetics/hat_cowboy_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      22,
+      91,
+      73
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/hat_cowboy_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/hat_flower_crown.png",
+    "size": [
+      306,
+      160
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      302,
+      156
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/hat_flower_crown.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      58,
+      12,
+      198,
+      84
+    ]
+  },
+  {
+    "candidate": "cosmetics/hat_flower_crown_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      25,
+      91,
+      70
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/hat_flower_crown_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/outfit_raincoat.png",
+    "size": [
+      249,
+      297
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      245,
+      293
+    ],
+    "status": "source: recomposed layers or reviewed production refinement",
+    "runtime": "assets/cosmetics/outfit_raincoat.png",
+    "runtime_size": [
+      256,
+      320
+    ],
+    "anchor_box": [
+      57,
+      166,
+      207,
+      260
+    ]
+  },
+  {
+    "candidate": "cosmetics/outfit_raincoat_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      12,
+      5,
+      84,
+      91
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/outfit_raincoat_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_chungus_pic.png",
+    "size": [
+      257,
+      267
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      253,
+      263
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/room_chungus_pic.png",
+    "runtime_size": [
+      100,
+      120
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_chungus_pic_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      6,
+      5,
+      89,
+      91
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/room_chungus_pic_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_cushion.png",
+    "size": [
+      278,
+      227
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      274,
+      223
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/room_cushion.png",
+    "runtime_size": [
+      140,
+      90
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_cushion_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      13,
+      91,
+      83
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/room_cushion_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_plant.png",
+    "size": [
+      274,
+      270
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      270,
+      266
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/room_plant.png",
+    "runtime_size": [
+      120,
+      160
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_plant_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      5,
+      91,
+      90
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/room_plant_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_rug.png",
+    "size": [
+      300,
+      205
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      296,
+      201
+    ],
+    "status": "integrated",
+    "runtime": "assets/cosmetics/room_rug.png",
+    "runtime_size": [
+      320,
+      120
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "cosmetics/room_rug_icon.png",
+    "size": [
+      96,
+      96
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      5,
+      18,
+      91,
+      77
+    ],
+    "status": "reference: rebuilt from corresponding object for consistent margins",
+    "runtime": "assets/cosmetics/room_rug_icon.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "room/main_room.png",
+    "size": [
+      1280,
+      720
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      247,
+      253
+    ],
+    "visible_bounds": [
+      0,
+      0,
+      1280,
+      720
+    ],
+    "status": "source: recomposed layers or reviewed production refinement",
+    "runtime": "assets/room/main_room.png",
+    "runtime_size": [
+      1280,
+      720
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/card_back.png",
+    "size": [
+      81,
+      102
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      252
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      79,
+      100
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/card_back.png",
+    "runtime_size": [
+      96,
+      96
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/cashew.png",
+    "size": [
+      224,
+      195
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      4,
+      4,
+      220,
+      191
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/cashew.png",
+    "runtime_size": [
+      48,
+      48
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/coin.png",
+    "size": [
+      88,
+      88
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      252
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      86,
+      86
+    ],
+    "status": "unused: no active consumer; existing theme supplies scalable panels",
+    "runtime": null,
+    "runtime_size": null,
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/mem_berry.png",
+    "size": [
+      82,
+      80
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      80,
+      78
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/mem_berry.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/mem_cloud.png",
+    "size": [
+      97,
+      72
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      95,
+      70
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/mem_cloud.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/mem_leaf.png",
+    "size": [
+      84,
+      74
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      252
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      82,
+      72
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/mem_leaf.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/mem_seed.png",
+    "size": [
+      49,
+      67
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      252
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      47,
+      65
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/mem_seed.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/mem_shell.png",
+    "size": [
+      92,
+      77
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      90,
+      75
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/mem_shell.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/mem_star.png",
+    "size": [
+      75,
+      73
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      252
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      73,
+      71
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/mem_star.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/panel.png",
+    "size": [
+      286,
+      86
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      284,
+      84
+    ],
+    "status": "unused: no active consumer; existing theme supplies scalable panels",
+    "runtime": null,
+    "runtime_size": null,
+    "anchor_box": null
+  },
+  {
+    "candidate": "ui/teacup.png",
+    "size": [
+      97,
+      69
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "visible_bounds": [
+      2,
+      2,
+      95,
+      67
+    ],
+    "status": "integrated",
+    "runtime": "assets/shared/teacup.png",
+    "runtime_size": [
+      80,
+      80
+    ],
+    "anchor_box": null
+  }
+]
