@@ -1,6 +1,5 @@
 extends Control
-## Cosy main room: care loop, navigation, room cosmetics.
-## Tutorial is owned by worker/chuggadi-tutorial (Chuggadi overlay hooks).
+## Main room care loop: feed / pet / rest + navigation + room cosmetics.
 
 @onready var baga_slot: Control = $BagaSlot
 @onready var room_rug: TextureRect = $RoomDecor/Rug
@@ -22,7 +21,8 @@ func _ready() -> void:
 	_connect_signals()
 	_refresh_hud()
 	_apply_room_cosmetics()
-	_maybe_start_tutorial()
+	if not GameState.tutorial_done:
+		_spawn_tutorial(false)
 
 
 func _spawn_baga() -> void:
@@ -44,7 +44,7 @@ func _connect_signals() -> void:
 	$NavBar/TeaButton.pressed.connect(func() -> void: SceneRouter.go_minigame("tea"))
 	$NavBar/MemoryButton.pressed.connect(func() -> void: SceneRouter.go_minigame("memory"))
 	$HUD/MuteButton.pressed.connect(_on_mute)
-	$HUD/TipsButton.pressed.connect(_on_tips)
+	$HUD/TipsButton.pressed.connect(func() -> void: _spawn_tutorial(true))
 
 
 func _refresh_hud() -> void:
@@ -52,7 +52,10 @@ func _refresh_hud() -> void:
 	energy_bar.value = GameState.energy
 	happiness_bar.value = GameState.happiness
 	coins_label.text = "Coins: %d" % GameState.coins
-	status_label.text = "Baga is devastated (as usual). Softly."
+	var mood := "devastated (as usual)"
+	if GameState.happiness > 80.0:
+		mood = "devastated, but soft"
+	status_label.text = "Baga is %s." % mood
 	$HUD/MuteButton.text = "Unmute" if GameState.muted else "Mute"
 
 
@@ -80,6 +83,8 @@ func _set_room(node: TextureRect, id: String) -> void:
 func _on_feed() -> void:
 	GameState.feed()
 	AudioManager.play_sfx("feed")
+	if _baga and _baga.has_method("play_feed_anim"):
+		_baga.play_feed_anim()
 	SaveManager.autosave()
 	_notify_tutorial("feed")
 
@@ -96,6 +101,8 @@ func _on_pet() -> void:
 func _on_rest() -> void:
 	GameState.rest()
 	AudioManager.play_sfx("click")
+	if _baga and _baga.has_method("play_rest_anim"):
+		_baga.play_rest_anim()
 	SaveManager.autosave()
 
 
@@ -104,22 +111,12 @@ func _on_mute() -> void:
 	_refresh_hud()
 
 
-func _on_tips() -> void:
-	_spawn_tutorial(true)
-
-
-func _maybe_start_tutorial() -> void:
-	if not GameState.tutorial_done:
-		_spawn_tutorial(false)
-
-
 func _spawn_tutorial(replay: bool) -> void:
 	for child in tutorial_host.get_children():
 		child.queue_free()
-	var path := "res://scenes/Chuggadi.tscn"
-	if not ResourceLoader.exists(path):
+	if not ResourceLoader.exists("res://scenes/Chuggadi.tscn"):
 		return
-	var packed := load(path) as PackedScene
+	var packed := load("res://scenes/Chuggadi.tscn") as PackedScene
 	var tut := packed.instantiate()
 	tutorial_host.add_child(tut)
 	if tut.has_method("start_tutorial"):

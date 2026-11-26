@@ -1,13 +1,7 @@
 extends Control
-## Layered Baga character with cosmetic overlays. Always devastated.
+## Layered Baga — crying-kitten chibi, always devastated.
 
-@onready var body: TextureRect = $Layers/Body
-@onready var skirt: TextureRect = $Layers/Skirt
 @onready var shirt: TextureRect = $Layers/Shirt
-@onready var shoes: TextureRect = $Layers/Shoes
-@onready var head: TextureRect = $Layers/Head
-@onready var hair: TextureRect = $Layers/Hair
-@onready var face: TextureRect = $Layers/Face
 @onready var outfit_overlay: TextureRect = $Layers/OutfitOverlay
 @onready var hat_overlay: TextureRect = $Layers/HatOverlay
 @onready var accessory_overlay: TextureRect = $Layers/AccessoryOverlay
@@ -20,9 +14,8 @@ var _bob_t: float = 0.0
 
 func _ready() -> void:
 	custom_minimum_size = Vector2(256, 320)
-	size = Vector2(256, 320)
-	if not GameState.cosmetics_changed.is_connected(_on_cosmetics_changed):
-		GameState.cosmetics_changed.connect(_on_cosmetics_changed)
+	if not GameState.cosmetics_changed.is_connected(_apply_cosmetics):
+		GameState.cosmetics_changed.connect(_apply_cosmetics)
 	if not GameState.speech_requested.is_connected(_on_speech):
 		GameState.speech_requested.connect(_on_speech)
 	_apply_cosmetics()
@@ -38,18 +31,13 @@ func _process(delta: float) -> void:
 			speech.visible = false
 
 
-func _on_cosmetics_changed() -> void:
-	_apply_cosmetics()
-
-
 func _apply_cosmetics() -> void:
 	var eq := Inventory.get_equipped()
 	_set_overlay(hat_overlay, str(eq.get("hat", "")))
 	_set_overlay(accessory_overlay, str(eq.get("accessory", "")))
 	_set_overlay(outfit_overlay, str(eq.get("outfit", "")))
 	_set_overlay(feet_overlay, str(eq.get("feet", "")))
-	var has_coat := not str(eq.get("outfit", "")).is_empty()
-	shirt.modulate = Color(1, 1, 1, 0.35 if has_coat else 1.0)
+	shirt.modulate = Color(1, 1, 1, 0.35 if not str(eq.get("outfit", "")).is_empty() else 1.0)
 
 
 func _set_overlay(node: TextureRect, cosmetic_id: String) -> void:
@@ -76,3 +64,15 @@ func play_pet_anim() -> void:
 	tw.tween_property($Layers, "rotation_degrees", -6.0, 0.12)
 	tw.tween_property($Layers, "rotation_degrees", 6.0, 0.12)
 	tw.tween_property($Layers, "rotation_degrees", 0.0, 0.12)
+
+
+func play_feed_anim() -> void:
+	var tw := create_tween()
+	tw.tween_property($Layers, "scale", Vector2(1.05, 0.95), 0.1)
+	tw.tween_property($Layers, "scale", Vector2.ONE, 0.12)
+
+
+func play_rest_anim() -> void:
+	var tw := create_tween()
+	tw.tween_property($Layers, "modulate", Color(0.9, 0.9, 1.0, 1.0), 0.3)
+	tw.tween_property($Layers, "modulate", Color.WHITE, 0.4)
