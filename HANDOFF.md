@@ -61,7 +61,7 @@ Worktrees live locally under `trees/` (gitignored).
 
 - Art is hand-authored raster layers (not SVG vectors); readable Baga/Chungus/Chuggadi, not placeholders
 - No ambient music loop yet
-- Web export preset present; full HTML5 export not verified in this pass
+- Web export verified: `godot --export-release Web export/web/index.html` succeeds
 - Nested legacy paths under `scenes/baga/`, `art/`, `audio/` still present as duplicates of `assets/` + flat `scenes/`
 
 ## Verify
