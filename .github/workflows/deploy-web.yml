@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -94,13 +94,24 @@ jobs:
           path: dist/baga-and-friends-web-itch.zip
           if-no-files-found: error
 
+      - name: Publish gh-pages branch (branch-source fallback)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: export/web
+          publish_branch: gh-pages
+          force_orphan: true
+          enable_jekyll: false
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Continues even when Pages site not yet created in Settings
+    continue-on-error: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (Actions source)
         id: deployment
         uses: actions/deploy-pages@v4

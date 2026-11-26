@@ -59,6 +59,16 @@ func _show() -> void:
 	_waiting_action = str(entry.get("wait", ""))
 	btn_next.text = "Done" if _step == _lines.size() - 1 else ("Waiting…" if _waiting_action != "" else "Next")
 	btn_next.disabled = _waiting_action != ""
+	# While waiting for Pet/Feed, let care buttons receive clicks through the dimmer.
+	var dim := get_node_or_null("Dim") as Control
+	if _waiting_action != "":
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+		if dim:
+			dim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	else:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+		if dim:
+			dim.mouse_filter = Control.MOUSE_FILTER_STOP
 
 
 func _on_next() -> void:

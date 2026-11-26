@@ -4,6 +4,12 @@
 
 # 🎮 [Play in browser](https://jxav22.github.io/baga-and-friends/)
 
+> **One-time setup:** GitHub Pages must be enabled once by a repo admin —  
+> **Settings → Pages → Build and deployment → Source: GitHub Actions**  
+> (or Source: Deploy from branch → `gh-pages` / `/`).  
+> Then re-run the [Build & Deploy Web](https://github.com/jxav22/baga-and-friends/actions/workflows/deploy-web.yml) workflow.  
+> Until then the play link may 404; CI **build + itch ZIP already succeed**.
+
 Cosy offline virtual pet built in **Godot 4.3** (Compatibility renderer, single-threaded Web export).
 
 Care for devastated Baga, play three minigames, buy cosmetics from Chungus, and follow a short Chuggadi tutorial.
@@ -11,6 +17,7 @@ Care for devastated Baga, play three minigames, buy cosmetics from Chungus, and 
 ## Play
 
 - **Web (GitHub Pages):** https://jxav22.github.io/baga-and-friends/
+- **Fallback branch:** `gh-pages` already hosts the latest HTML5 build (enable Pages from that branch if preferred)
 - Desktop: `godot --path .` (Godot 4.3+)
 
 ## itch.io HTML5 ZIP
