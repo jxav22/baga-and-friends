@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/shop/ChungusShop.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/chungus/chungus.png" id="2"]
 
 [node name="ChungusShop" type="Control"]
 layout_mode = 3
@@ -16,31 +17,105 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.92, 0.88, 0.82, 1)
+color = Color(0.90, 0.86, 0.78, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 30.0
-offset_right = 800.0
-offset_bottom = 80.0
-theme_override_font_sizes/font_size = 28
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
 theme_override_colors/font_color = Color(0.29, 0.22, 0.16, 1)
 text = "Chungus Shop"
 
-[node name="Body" type="Label" parent="."]
+[node name="CoinsLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 100.0
+offset_top = 64.0
+offset_right = 300.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 20
+text = "Coins: 25"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 110.0
+offset_right = 520.0
+offset_bottom = 560.0
+
+[node name="List" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="PreviewPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 110.0
+offset_right = 980.0
+offset_bottom = 420.0
+
+[node name="Preview" type="TextureRect" parent="PreviewPanel"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Detail" type="Label" parent="PreviewPanel"]
+layout_mode = 2
+autowrap_mode = 3
+text = "Select an item"
+
+[node name="BuyButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 440.0
+offset_right = 720.0
+offset_bottom = 490.0
+text = "Buy"
+
+[node name="EquipButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 440.0
 offset_right = 900.0
-offset_bottom = 200.0
-theme_override_font_sizes/font_size = 18
-text = "Coming softy..."
+offset_bottom = 490.0
+text = "Equip"
+
+[node name="DressButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 510.0
+offset_right = 740.0
+offset_bottom = 554.0
+text = "Dress Up"
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 640.0
-offset_right = 200.0
+offset_right = 220.0
 offset_bottom = 684.0
 text = "Back to Room"
+
+[node name="Chungus" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 980.0
+offset_top = 420.0
+offset_right = 1240.0
+offset_bottom = 660.0
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ChungusSpeech" type="Label" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 360.0
+offset_right = 1220.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 16
+text = "...."
+horizontal_alignment = 1
