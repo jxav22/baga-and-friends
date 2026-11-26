@@ -143,6 +143,9 @@ func _check_tutorial() -> void:
 	tutorial.call("_on_next")
 	_expect(tutorial.get("_waiting_action") == "pet", "tutorial waits for pet")
 	_expect(tutorial.mouse_filter == Control.MOUSE_FILTER_IGNORE, "tutorial passes care input")
+	var panel := tutorial.get_node("Panel") as Control
+	var pet_button := room.get_node("CareBar/PetButton") as Control
+	_expect(not panel.get_global_rect().intersects(pet_button.get_global_rect()), "practice panel clears Pet button")
 	room.call("_on_pet")
 	_expect(tutorial.get("_waiting_action") == "feed", "pet advances tutorial")
 	room.call("_on_feed")
@@ -184,7 +187,7 @@ func _check_tea() -> void:
 	game.set_process(false)
 	game.call("_start")
 	var coins_before := GameState.coins
-	for round_index in 5:
+	for _round_index in 5:
 		var start := float(game.get("_zone_start"))
 		var end := float(game.get("_zone_end"))
 		game.get_node("Meter").value = (start + end) * 50.0
