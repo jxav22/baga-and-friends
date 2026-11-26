@@ -1,5 +1,7 @@
 # Baga & Friends
 
+![Baga & Friends illustrated cover featuring Baga, Chungus and Chuggadi](docs/images/baga-and-friends-hero.avif)
+
 Cosy offline virtual pet built in **Godot 4.3** (Compatibility renderer).
 
 Care for devastated Baga, play three minigames, buy cosmetics from Chungus, and follow a short Chuggadi tutorial.
