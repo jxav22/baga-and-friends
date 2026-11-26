@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3]
+
+[resource]
+default_font_size = 16
+Button/colors/font_color = Color(0.21, 0.18, 0.16, 1)
+Button/colors/font_hover_color = Color(0.29, 0.22, 0.16, 1)
+Button/colors/font_pressed_color = Color(0.15, 0.12, 0.1, 1)
+Button/styles/normal = null
+Label/colors/font_color = Color(0.21, 0.18, 0.16, 1)
+ProgressBar/colors/font_color = Color(0.21, 0.18, 0.16, 1)
