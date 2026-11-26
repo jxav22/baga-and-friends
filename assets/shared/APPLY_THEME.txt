@@ -1,0 +1,1 @@
+Set project theme or root Control.theme = preload('res://themes/baga_theme.tres') in Boot/MainRoom.
