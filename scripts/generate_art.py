@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate layered character and UI art for Baga & Friends MVP."""
+"""Historical placeholder generator. Outputs only to export/legacy-art.
+
+Approved runtime art is built by scripts/prepare_art.py; never copy these sketches
+over assets/ or art/production/.
+"""
 from __future__ import annotations
 
 from pathlib import Path
@@ -7,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT / "art"
+ART = ROOT / "export" / "legacy-art"
 
 # Warm muted palette
 IVORY = (245, 236, 220, 255)

@@ -3,6 +3,7 @@ extends Control
 
 const PAIRS := 6
 const ICONS := ["leaf", "seed", "berry", "cloud", "star", "shell"]
+const CARD_BACK := preload("res://assets/shared/card_back.png")
 
 @onready var grid: GridContainer = $Grid
 @onready var status: Label = $Status
@@ -59,8 +60,10 @@ func _build_deck() -> void:
 		var icon_name: String = _deck[idx]
 		var btn := Button.new()
 		btn.custom_minimum_size = Vector2(100, 100)
-		btn.text = "?"
-		btn.icon = null
+		btn.icon = CARD_BACK
+		btn.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		btn.expand_icon = true
+		btn.add_theme_constant_override("icon_max_width", 80)
 		var capture := icon_name
 		var bref := btn
 		btn.pressed.connect(func() -> void: _on_card(bref, capture))
@@ -102,10 +105,8 @@ func _on_card(btn: Button, icon_name: String) -> void:
 		if _matched >= PAIRS:
 			_finish()
 	else:
-		a.text = "?"
-		b.text = "?"
-		a.icon = null
-		b.icon = null
+		a.icon = CARD_BACK
+		b.icon = CARD_BACK
 		AudioManager.play_sfx("click")
 	_flipped.clear()
 	_lock = false
